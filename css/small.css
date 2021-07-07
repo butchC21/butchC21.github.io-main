@@ -1,0 +1,476 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+   }
+
+   .banner {
+    display: none;
+    background-color:rgb(233, 193, 61);
+    text-align: center;
+    font-size: 16px;
+    padding: .5em;
+}
+
+header {
+	padding: 5px 0;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+header img {
+	width: 100px;
+	height: auto;
+}
+
+.headings {
+	display: flex;
+	flex-direction: column;
+}
+
+header, footer{
+    background: linear-gradient(
+        180deg,
+        rgba(8, 8, 8, 0.63) 10%,
+        rgba(12, 10, 10, 0)
+      );
+  }
+
+  .tagline {
+	letter-spacing: 1pt;
+	color: darkslateblue;
+	margin-left: 20px;
+	font-size: .9rem;
+}
+
+h1{
+	margin-bottom: 0;
+}
+
+/*Navigation Section******/
+nav {
+	margin: 0 auto;
+	background-color:#0BC9CD;
+}
+
+.navigation {
+	list-style: none;
+	padding: 0;
+}
+
+.navigation li:first-child {
+	display: block;
+}
+
+.navigation li {
+	display: none;
+}
+
+.navigation a {
+	display: block;
+	padding: 1rem;
+	text-align: left;
+	text-decoration: none;
+  color: #000;
+	font-size: 19px;
+  font-weight: 650;
+}
+
+.navigation a:hover {
+	background-color: #08989b;
+	color: #fff;
+}
+
+.responsive li {
+	display: block;
+}
+
+.active{
+  background-color: #066568;
+}
+/*End of Navigation Section******/
+
+
+/*HERO Section******/
+.main-area img{
+  width: 100%;
+}
+
+.hero-image{
+  margin: 0;
+}
+
+.herodiv {
+  margin: 10px auto; 
+  position: relative;
+}
+
+.summary {
+position: absolute;
+top: 0;
+right: 20;
+background: linear-gradient(#eee, #45aa7b);
+border: 1px solid rgb(8, 177, 50);
+box-shadow: 0 0 30px rgb(20, 19, 19);
+opacity: .75;
+padding: 15px;
+margin: 3%;
+height: 200px;
+width: 250px;
+text-align: left;
+border-radius: 15px;
+}
+
+.summary strong{
+  color: blue;
+}
+
+@media only screen and (max-width: 600px){
+  .summary {
+      position: relative;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+  }
+  }
+/*End of HERO Section******/
+
+
+/*WEATHER FORECAST Section******/
+.tiny {
+	font-size: .8rem;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.flex-col {
+	flex: 1 1 auto;
+	background-color: rgb(214, 243, 214);
+}
+
+.flex-col, .column-col, .grid-col {
+	border-bottom: 2px solid rgb(105, 103, 103);
+	border-left: 1.5px solid rgb(105, 103, 103);
+	text-align: center;
+}
+
+.flex-col:hover, td:hover, .column-col:hover, .grid-col:hover {
+	opacity: 0.75;
+	background-color: rgb(148, 185, 233);
+	color: white;
+	cursor: pointer;
+}
+
+.flex, .column, .grid {
+	border-right: 1px solid #333;
+}
+
+.col-head {
+	display: block;
+	padding: 5px;
+  border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	text-align: center;
+}
+
+img {
+	padding: 0.25rem;
+}
+
+.data {
+	display: block;
+	padding: 0 5px 5px;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+.col-head,th {
+	font-weight: 700;
+	background-color: #0BC9CD;
+}
+
+.column {
+	column-count: 5;
+	column-gap: 0;
+}
+
+.column img {
+	width: 50%;
+}
+
+.grid { 
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+}
+/*End of WEATHER FORECAST Section******/
+
+
+/* WEATHER GALLERY**/
+.lazy-images img {
+    background: #e2e2e9; 
+    width: 400px;
+    height: 300px;
+    margin: 5px auto;
+    border: 0;
+	border-radius: 15px;
+  }
+
+  .lazy-images h2{
+	  text-align: center;
+  }
+
+  .weather-gallery-container{
+	background: linear-gradient(#8adfe2, #cab868);
+	margin: auto;
+	overflow: auto;
+	padding-bottom: 20px;
+  }
+
+  .gallery{
+	  margin-left: 30px;
+	  float: left;
+	  width: 400px;
+	  padding-bottom: 20px;
+	  border-radius: 15px;
+	 
+  }
+
+  .gallery:hover{
+	box-shadow: -30px 15px 20px rgba(0,0,0,.5);
+	cursor: pointer;
+  }
+
+  .desc{
+	  text-align: center;
+  }
+
+/* End of WEATHER GALLERY**/
+
+
+/*ARTICLE Section******/
+.article-box{
+    padding: 20px;
+}
+
+.article-paragraph p{
+    padding: 15px;
+}
+
+@media only screen and (max-width: 600px){
+	.article-box img {
+		position: relative;
+		margin: 0;
+		height: 100%;
+		width: 100%;
+	}
+	}
+/*End of ARTICLE Section******/
+
+
+h2{
+    color: #EBC20B;
+    font-size: 32px;
+    margin: 2%;
+  }
+
+footer{
+    background: linear-gradient(
+        180deg,
+        rgba(8, 8, 8, 0.63) 10%,
+        rgba(12, 10, 10, 0)
+      );
+      padding: 10px;
+  }
+
+  .map{
+    float: right;
+    align-content: end;
+    justify-items: start;
+    margin-top: -180px;
+}
+
+  .social{
+    width: 220px;
+    margin: 15px  10px 20px 20px;
+}
+
+.round{
+    border-radius: 50%;
+}
+
+
+/*FORM Section***/
+.online-form{
+	background:honeydew;
+}
+
+fieldset{
+	padding-bottom: 20px;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	border-radius: 20px;
+	border: 4px double gray;
+}
+
+legend {
+	color: blue;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+label{
+	font-size: .8rem;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
+}
+
+input, select{
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	width: 60%;
+	height: 35px;
+}
+
+textarea{
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	width: 90%;
+	margin-left: 15px;
+}
+
+#severity{
+	width: 60%;
+}
+
+.comment-area{
+	font-size: 12px;
+}
+
+.flexly{
+	display: block;
+	margin: 15px;
+}
+
+.comment-area{
+	margin-top: 0;
+}
+
+.btn{
+	width: 50%;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+
+button{
+	background-color: rgb(21, 218, 218);
+	border-radius: 20px;
+	border: 1px solid gray;
+	height: 35px;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: gold;
+	color: white;
+}
+/*End of FORM Section***/
+
+
+/*HOMEPAGE Section***/
+.homepage h3{
+	color: darkblue;
+}
+
+.homepage h2{
+	text-align: left;
+	margin: 0;
+}
+.homepage p{
+	margin: 0;
+}
+
+.homepage{
+	display: flex;
+	flex-flow: column;
+}
+
+/*Small Screen*/
+@media only screen and (min-width: 140px) {
+.homepage section {
+	background-color: honeydew;
+	border: 3px solid rgb(161, 158, 158);
+	border-radius: 15px;
+	margin: 10px auto;
+	padding: 1rem;
+	width: 70%
+}
+
+.homepage section img {
+	width: 80%;
+	max-width: 15rem;
+	box-shadow: 10px 8px 10px rgba(14, 13, 13, 0.561);
+}
+}
+
+/*Medium Screen*/
+@media only screen and (min-width: 1000px) {
+    .homepage {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 1rem;
+    }
+
+    .homepage section {
+        width: 40%;
+    }
+}
+
+/*Large Screen*/
+@media only screen and (min-width: 1028px) {
+    .homepage section {
+        width: 30%;  
+    }
+	.homepage img{
+		height: 200px;
+		margin: 10px 40px;
+		border: 1px solid rgba(0,0,0,.80);
+	}
+}
+
+
+
+
+
+
+
+
+
+/*End of HOMEPAGE Section***/
+
+
+/*THANK YOU Message***/
+.thanks p, h2{
+	text-align: center;
+}
+
+.thanks p{
+	font-size: 18px;
+}
+
+.thanks{
+	padding-bottom: 50px;
+}
